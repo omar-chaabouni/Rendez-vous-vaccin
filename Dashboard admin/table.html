@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Table - Rendez-vous vaccin</title>
+    <!--  appel des fichiers css -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body id="page-top">
+    <!--  Side bar ç gauche contenant Dashboard, Table et login -->
+    <!--  Notez bien que login ne doit pas être dans cette navbar car c'est pas logique
+    Elle mise juste pour la mise en oeuvre de la page  login-->
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"></div>
+                    <div class="sidebar-brand-text mx-3"><span>&nbsp;Rendez-vous vaccin</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link active" href="table.html"><i class="fas fa-table"></i><span>Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html"><i class="far fa-user-circle"></i><span>Login</span></a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <form class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group"><input type="text" class="bg-light form-control border-0 small" placeholder="Rechercher ..." />
+                                <div class="input-group-append"><button class="btn btn-primary py-0" type="button" style="background: #3b99e0;"><i class="fas fa-search"></i></button></div>
+                            </div>
+                        </form>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1"></li>
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown"></div>
+                            </li>
+                            <!--  Menu de déconnection -->
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Omar Chaabouni</span></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout</a></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--  Titre de la table -->
+                <div class="container-fluid">
+                    <div class="card shadow" style="border-color: #3b99e0;">
+                        <div class="card-header py-3" style="border-color: #3b99e0;">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0"><br><strong>Table des vaccinés</strong><br><br></h6>
+                                    <div class="col"><div class="btn btn-primary btn-icon-split" role="button" style="background: #3b99e0 !important;color: #3b99e0!important; float:right"><span class="text-white text">Trier par</span></div></div><button class="btn btn-link btn-sm" type="button"><i class="fas fa-chevron-circle-down text-gray-400"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!--  Dropdown de choix de sélection du nombres d'inscrits par page -->
+                            <div class="row">
+                                <div class="col-md-6 text-nowrap">
+                                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label>Show&nbsp;<select class="form-control form-control-sm custom-select custom-select-sm">
+                                                <option value="10" selected="">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                            </select>&nbsp;</label></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-md-right dataTables_filter" id="dataTable_filter"><label><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"></label></div>
+                                </div>
+                            </div>
+                            <!--  Remplissage des données temporairement statiques -->
+                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Nom et Prénom</th>
+                                            <th>Gouvernorat</th>
+                                            <th>Centre de vaccin</th>
+                                            <th>Age</th>
+                                            <th>Date de vaccination</th>
+                                            <th>Vacciné</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Ali Abdi</td>
+                                            <td>Tunis</td>
+                                            <td>Charles Nicole</td>
+                                            <td>33</td>
+                                            <td>20/03/2021</td>
+                                            <td>Oui</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wissem Yahya</td>
+                                            <td>Nabeul</td>
+                                            <td>Hopital Bourghiba<br></td>
+                                            <td>47</td>
+                                            <td>-<br></td>
+                                            <td>Non</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Achraf Amor</td>
+                                            <td>Gafsa</td>
+                                            <td>Hopital Hedi Chaker<br></td>
+                                            <td>66</td>
+                                            <td>-<br></td>
+                                            <td>Non</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Amira Salem</td>
+                                            <td>Sfax</td>
+                                            <td>Hopital Bourghiba<br></td>
+                                            <td>41</td>
+                                            <td>30/03/2021<br></td>
+                                            <td>Oui</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Salma Mednini</td>
+                                            <td>Medenine</td>
+                                            <td>Hopital Hedi Chaker<br></td>
+                                            <td>28</td>
+                                            <td>18/03/2021<br></td>
+                                            <td>Oui</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Karim Ali</td>
+                                            <td>Ben Arous</td>
+                                            <td>Hopital Hedi Chaker<br></td>
+                                            <td>61</td>
+                                            <td>14/03/2021<br></td>
+                                            <td>Oui</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Slim Achref<br></td>
+                                            <td>Tunis</td>
+                                            <td>Hopital Rabta<br></td>
+                                            <td>38</td>
+                                            <td>-<br></td>
+                                            <td>Non</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nour Salem</td>
+                                            <td>Sousse</td>
+                                            <td>Hopital Sahloul<br></td>
+                                            <td>21</td>
+                                            <td>-<br></td>
+                                            <td>Non</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Akrem Ben Ali</td>
+                                            <td>Kasserine</td>
+                                            <td>Hopital Bourghiba<br></td>
+                                            <td>46</td>
+                                            <td>-<br></td>
+                                            <td>Non</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Amine Ben Ahmed</td>
+                                            <td>Ben arous</td>
+                                            <td>Hopital Hedi Chaker<br></td>
+                                            <td>22</td>
+                                            <td>-<br></td>
+                                            <td>Non</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr></tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 align-self-center">
+                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Affichant de 1 à10 depuis 30000</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                            <li class="page-item active" style="background-color: #3b99e0 !important;"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  footer -->
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © Rendez-vous vaccin 2020</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+
+    <!--  appel des fichiers javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/aa.js"></script>
+    <script src="assets/js/bb.js"></script>
+    <script src="assets/js/cc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

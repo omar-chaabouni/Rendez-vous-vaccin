@@ -1,0 +1,21 @@
+.sidebar {
+  width: 16rem !important;
+  color: #3b99e0;
+  background: #3b99e0;
+}
+
+.card.shadow-lg.o-hidden.border-0.my-5 {
+  margin-top: 6rem!important;
+}
+
+.btn.btn-primary.btn-sm.d-none.d-sm-inline-block {
+}
+
+.text-primary.m-0.font-weight-bold {
+  color: #3b99e0 !important;
+}
+
+.page-item {
+  color: #3b99e0 !important;
+}
+
