@@ -3,8 +3,7 @@ Project in the crisis management theme: result of participation in ENSI's TuniHa
 
 Second place winning project.
 
-We introduced this project to the Tunisian Government during the Covid-19 crisis. The goverment representatives really liked the idea and thanked us for our efforts.
-They offered us the chance to participate in such project but we kindly refused as our ambitions in terms of personal development didn't really match the technologies they're using. They ended up making our solution which can only make us very very proud as we could put our footprint to provide help to our nation, even with a small idea.
+This project idea was adopted by the Tunisian government which is a great honor to us.
 
 ## Description
 “Rendez-vous Vaccin” is a web application to be used by the tunisian government to properly distribute the anti-covid-19 vaccine all over the country. It’s about building a large database of the people who’d like to take the vaccine, sorting them by priority according to their age, job and medical records and suggesting the most optimized distribution of the doses to the vaccination centers. The platform offers a dashboard to keep up with the vaccination procedure and visualize relevant statistics and a follow-up with patients (reaction to the dose, side effects, etc.)
