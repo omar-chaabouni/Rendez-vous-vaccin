@@ -1,9 +1,15 @@
 # Rendez-vous-vaccin
-Projet dans le thème de gestion de crise : résultat de participation dans le hackaton TuniHack 6.0 de l'ENSI
-Projet vainqueur de la deuxième place
+Project in the crisis management theme: result of participation in ENSI's TuniHack 6.0 hackaton.
+
+Second place winning project.
+
+We introduced this project to the Tunisian Government during the Covid-19 crisis. The goverment representatives really liked the idea and thanked us for our efforts.
+They offered us the chance to participate in such project but we kindly refused as our ambitions in terms of personal development didn't really match the technologies they're using. They ended up making our solution which can only make us very very proud as we could put our footprint to provide help to our nation, even with a small idea.
 
 ## Description
 “Rendez-vous Vaccin” is a web application to be used by the tunisian government to properly distribute the anti-covid-19 vaccine all over the country. It’s about building a large database of the people who’d like to take the vaccine, sorting them by priority according to their age, job and medical records and suggesting the most optimized distribution of the doses to the vaccination centers. The platform offers a dashboard to keep up with the vaccination procedure and visualize relevant statistics and a follow-up with patients (reaction to the dose, side effects, etc.)
+
+This project was realized by Omar CHAABOUNI, Chaima ARAIBI and Ahmed BELLAAJ 2nd year engineering students students of the National Institute Of applied Science and Technology (INSAT), in Tunis, Tunisia and specilized in Computer Networks and Telecommunications.
 
 ## Built With :
 we used the well known web technologies for developing the front-end :
