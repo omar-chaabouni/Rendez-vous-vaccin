@@ -99,8 +99,10 @@ This project is still in progress :
 
 In fact this version is implemented on the occasion of the 24h hackathon Tunihack so we tried to achieve and cover as much front-end and styling aspects as we can to illustrate the main features of the project in a presentable way. In upcoming releases, we expect to implement some back-end , store data in a database, train and tune a machine learning algorithm for multiclass classification.
 
+Never mind, the project was actually stolen by the Tunisian government.
+
 ## Contact
 To support us or contribute in this project , you can contact us on :
+* omar.chaabouni@outlook.com
 * chaima.araibi@insat.u-carthage.tn
 * ahmed.belaaj@insat.u-carthage.tn
-* omar.chaabouni@outlook.com
